@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReseñaTuApto | Reseñas reales antes de alquilar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<nav class="mobile-bottom-nav">
+    <a href="./index.html" class="active">
+        <span>🏠</span>
+        Inicio
+    </a>
+
+    <a href="./pages/buscar.html">
+        <span>🔍</span>
+        Buscar
+    </a>
+
+    <a href="./pages/resenar.html">
+        <span>⭐</span>
+        Reseñar
+    </a>
+
+    <a href="./pages/sobre.html">
+        <span>💬</span>
+        Sobre
+    </a>
+</nav>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="./index.html" class="navbar__logo">
+                ReseñaTuApto
+            </a>
+
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <div class="navbar__content" id="navbarContent">
+
+                <ul class="navbar__menu">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./pages/buscar.html">Buscar</a></li>
+                    <li><a href="./pages/resenar.html">Reseñar</a></li>
+                    <li><a href="./pages/sobre.html">Sobre el proyecto</a></li>
+                </ul>
+
+                <a href="./pages/resenar.html" class="navbar__button">
+                    Dejar reseña
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero__content">
+
+                <span class="hero__tag">
+                    Reseñas reales de alquileres
+                </span>
+
+                <h1 class="hero__title">
+                    Conocé la verdad antes de alquilar.
+                </h1>
+
+                <p class="hero__text">
+                    Buscá apartamentos por barrio, leé experiencias reales de otros inquilinos
+                    y compartí tu propia reseña para ayudar a más personas.
+                </p>
+
+                <div class="hero__search">
+
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por barrio, calle o edificio..."
+                        class="hero__input"
+                    >
+
+                    <button class="hero__search-button">
+                        Buscar
+                    </button>
+
+                </div>
+
+                <div class="hero__actions">
+
+                    <a href="./pages/resenar.html" class="button button--primary">
+                        Escribir una reseña
+                    </a>
+
+                    <a href="./pages/buscar.html" class="button button--secondary">
+                        Ver reseñas
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero__image">
+
+                <img 
+                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" 
+                    alt="Apartamento moderno en alquiler"
+                >
+
+                <div class="hero__review-card">
+
+                    <span class="hero__rating">
+                        ⭐ 4.6
+                    </span>
+
+                    <p>
+                        “Muy luminoso, buena zona, pero con algo de ruido de noche.”
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BARRIOS -->
+        <section class="neighborhoods">
+
+            <div class="section-heading">
+
+                <span class="section-heading__tag">
+                    Explorar por zona
+                </span>
+
+                <h2 class="section-heading__title">
+                    Barrios de Montevideo
+                </h2>
+
+                <p class="section-heading__text">
+                    Encontrá reseñas de apartamentos según el barrio donde querés vivir.
+                </p>
+
+            </div>
+
+            <div class="neighborhoods__grid">
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Aguada</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>La Blanqueada</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Buceo</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Carrasco</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Centro</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Ciudad Vieja</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Cordón</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Goes</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Malvín</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Maroñas</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Nuevo Centro</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Palermo</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Parque Batlle</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Punta Gorda</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Tres Cruces</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+                <a href="./pages/buscar.html" class="neighborhood-card">
+                    <h3>Unión</h3>
+                    <p>Ver reseñas</p>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ÚLTIMAS RESEÑAS -->
+        <section class="reviews">
+
+            <div class="section-heading">
+
+                <span class="section-heading__tag">
+                    Experiencias reales
+                </span>
+
+                <h2 class="section-heading__title">
+                    Últimas reseñas
+                </h2>
+
+                <p class="section-heading__text">
+                    Opiniones de personas que ya alquilaron y quieren ayudar a otros inquilinos.
+                </p>
+
+            </div>
+
+            <div class="reviews__grid">
+
+                <article class="review-card">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" 
+                        alt="Apartamento en Buceo"
+                        class="review-card__image"
+                    >
+
+                    <div class="review-card__content">
+
+                        <div class="review-card__top">
+
+                            <span class="review-card__neighborhood">
+                                Buceo
+                            </span>
+
+                            <span class="review-card__rating">
+                                ⭐ 4.5
+                            </span>
+
+                        </div>
+
+                        <h3 class="review-card__title">
+                            Apartamento luminoso cerca de la rambla
+                        </h3>
+
+                        <p class="review-card__text">
+                            Buena ubicación y mucha luz natural. Lo negativo fue algo de humedad
+                            en invierno y gastos comunes un poco altos.
+                        </p>
+
+                        <div class="review-card__details">
+
+                            <span>
+                                Humedad: Media
+                            </span>
+
+                            <span>
+                                Ruido: Bajo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="review-card">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" 
+                        alt="Apartamento en Cordón"
+                        class="review-card__image"
+                    >
+
+                    <div class="review-card__content">
+
+                        <div class="review-card__top">
+
+                            <span class="review-card__neighborhood">
+                                Cordón
+                            </span>
+
+                            <span class="review-card__rating">
+                                ⭐ 3.8
+                            </span>
+
+                        </div>
+
+                        <h3 class="review-card__title">
+                            Buena zona, pero edificio antiguo
+                        </h3>
+
+                        <p class="review-card__text">
+                            Muy cómodo para moverse en ómnibus. El apartamento estaba bien,
+                            aunque el edificio tenía problemas de mantenimiento.
+                        </p>
+
+                        <div class="review-card__details">
+
+                            <span>
+                                Humedad: Alta
+                            </span>
+
+                            <span>
+                                Ruido: Medio
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="review-card">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" 
+                        alt="Apartamento en Carrasco"
+                        class="review-card__image"
+                    >
+
+                    <div class="review-card__content">
+
+                        <div class="review-card__top">
+
+                            <span class="review-card__neighborhood">
+                                Carrasco
+                            </span>
+
+                            <span class="review-card__rating">
+                                ⭐ 4.9
+                            </span>
+
+                        </div>
+
+                        <h3 class="review-card__title">
+                            Zona tranquila y apartamento en buen estado
+                        </h3>
+
+                        <p class="review-card__text">
+                            Excelente iluminación, poco ruido y buen trato con la inmobiliaria.
+                            El precio era alto, pero la experiencia fue muy buena.
+                        </p>
+
+                        <div class="review-card__details">
+
+                            <span>
+                                Humedad: Baja
+                            </span>
+
+                            <span>
+                                Ruido: Bajo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta">
+
+            <div class="cta__content">
+
+                <h2>
+                    ¿Ya alquilaste un apartamento?
+                </h2>
+
+                <p>
+                    Tu experiencia puede ayudar a otra persona a tomar una mejor decisión antes de mudarse.
+                </p>
+
+                <a href="./pages/resenar.html" class="button button--primary">
+                    Dejar mi reseña
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <footer class="footer">
+
+        <div class="footer__content">
+
+            <p>
+                © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos a alquilar mejor.
+            </p>
+            <div class="footer__links">
+                <a href="./pages/buscar.html">
+                    Buscar
+                </a>
+                 <a href="./pages/resenar.html">
+                    Reseña
+                 </a>
+                <a href="./pages/sobre.html">
+                    Sobre el proyecto
+                   </a>
+  </div>
+  </div>
+  </footer>
+ <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

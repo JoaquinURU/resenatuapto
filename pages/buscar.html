@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar reseñas | ReseñaTuApto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<nav class="mobile-bottom-nav">
+    <a href="../index.html">
+        <span>🏠</span>
+        Inicio
+    </a>
+
+    <a href="./buscar.html" class="active">
+        <span>🔍</span>
+        Buscar
+    </a>
+
+    <a href="./resenar.html">
+        <span>⭐</span>
+        Reseñar
+    </a>
+
+    <a href="./sobre.html">
+        <span>💬</span>
+        Sobre
+    </a>
+</nav>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="navbar__logo">
+                ReseñaTuApto
+            </a>
+
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <div class="navbar__content" id="navbarContent">
+
+                <ul class="navbar__menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./buscar.html">Buscar</a></li>
+                    <li><a href="./resenar.html">Reseñar</a></li>
+                    <li><a href="./sobre.html">Sobre el proyecto</a></li>
+                </ul>
+
+                <a href="./resenar.html" class="navbar__button">
+                    Dejar reseña
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="search-page">
+
+            <div class="section-heading">
+
+                <span class="section-heading__tag">
+                    Buscar reseñas
+                </span>
+
+                <h1 class="section-heading__title">
+                    Encontrá experiencias reales antes de alquilar
+                </h1>
+
+                <p class="section-heading__text">
+                    Buscá por barrio, calle o características del apartamento.
+                </p>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    class="search-box__input"
+                    placeholder="Ej: Buceo, humedad, Carrasco..."
+                >
+
+                <button class="search-box__button">
+                    Buscar
+                </button>
+
+            </div>
+
+            <!-- FILTROS -->
+            <div class="filters">
+
+                <button class="filter-button active">
+                    Todos
+                </button>
+
+                <button class="filter-button">
+                    Aguada
+                </button>
+
+                <button class="filter-button">
+                    Buceo
+                </button>
+
+                <button class="filter-button">
+                    Carrasco
+                </button>
+
+                <button class="filter-button">
+                    Cordón
+                </button>
+
+                <button class="filter-button">
+                    Malvín
+                </button>
+
+                <button class="filter-button">
+                    Palermo
+                </button>
+
+                <button class="filter-button">
+                    Tres Cruces
+                </button>
+
+            </div>
+
+            <!-- BOTON BORRAR -->
+            <div class="clear-reviews">
+
+                <button id="clearReviewsBtn">
+                    🗑️ Borrar reseñas de prueba
+                </button>
+
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="reviews__grid search-results">
+
+                <!-- Las reseñas de Firebase se cargan acá con JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer__content">
+
+            <p>
+                © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos.
+            </p>
+
+            <div class="footer__links">
+
+                <a href="./buscar.html">
+                    Buscar
+                </a>
+
+                <a href="./resenar.html">
+                    Reseñar
+                </a>
+
+                <a href="./sobre.html">
+                    Sobre el proyecto
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
