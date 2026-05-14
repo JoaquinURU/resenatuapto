@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dejar reseña | ReseñaTuApto</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS -->
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
-<nav class="mobile-bottom-nav">
-    <a href="../index.html">
-        <span>🏠</span>
-        Inicio
-    </a>
 
-    <a href="./buscar.html">
-        <span>🔍</span>
-        Buscar
-    </a>
-
-    <a href="./resenar.html" class="active">
-        <span>⭐</span>
-        Reseñar
-    </a>
-
-    <a href="./sobre.html">
-        <span>💬</span>
-        Sobre
-    </a>
-</nav>
 <body>
 
     <!-- HEADER -->
+
     <header class="header">
 
         <nav class="navbar">
@@ -43,17 +34,38 @@
                 ReseñaTuApto
             </a>
 
-            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+            <button class="navbar__toggle" id="navbarToggle">
                 ☰
             </button>
 
             <div class="navbar__content" id="navbarContent">
 
                 <ul class="navbar__menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./buscar.html">Buscar</a></li>
-                    <li><a href="./resenar.html">Reseñar</a></li>
-                    <li><a href="./sobre.html">Sobre el proyecto</a></li>
+
+                    <li>
+                        <a href="../index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./buscar.html">
+                            Buscar
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./resenar.html">
+                            Reseñar
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./sobre.html">
+                            Sobre
+                        </a>
+                    </li>
+
                 </ul>
 
                 <a href="./resenar.html" class="navbar__button">
@@ -67,311 +79,385 @@
     </header>
 
     <!-- MAIN -->
-    <main>
 
-        <section class="review-form-page">
+    <main class="review-form-page">
 
-            <div class="section-heading">
+        <div class="section-heading">
 
-                <span class="section-heading__tag">
-                    Compartí tu experiencia
-                </span>
+            <span class="section-heading__tag">
+                Compartí tu experiencia
+            </span>
 
-                <h1 class="section-heading__title">
-                    Dejá una reseña del apartamento
-                </h1>
+            <h1 class="section-heading__title">
+                Ayudá a futuros inquilinos
+            </h1>
 
-                <p class="section-heading__text">
-                    Tu opinión puede ayudar a otra persona antes de firmar un contrato de alquiler.
-                </p>
-
-            </div>
-
-            <!-- FORM -->
-            <form class="review-form">
-
-                <!-- BARRIO Y DIRECCION -->
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label for="barrio">
-                            Barrio
-                        </label>
-
-                        <select id="barrio" name="barrio">
-
-                            <option value="">
-                                Seleccioná un barrio
-                            </option>
-
-                            <option>Aguada</option>
-                            <option>La Blanqueada</option>
-                            <option>Buceo</option>
-                            <option>Carrasco</option>
-                            <option>Centro</option>
-                            <option>Ciudad Vieja</option>
-                            <option>Cordón</option>
-                            <option>Goes</option>
-                            <option>Malvín</option>
-                            <option>Maroñas</option>
-                            <option>Nuevo Centro</option>
-                            <option>Palermo</option>
-                            <option>Parque Batlle</option>
-                            <option>Punta Gorda</option>
-                            <option>Tres Cruces</option>
-                            <option>Unión</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="direccion">
-                            Dirección o referencia
-                        </label>
-
-                        <input
-                            type="text"
-                            id="direccion"
-                            name="direccion"
-                            placeholder="Ej: cerca de Av. Italia y Comercio"
-                        >
-
-                    </div>
-
-                </div>
-
-                <!-- TITULO -->
-                <div class="form-group">
-
-                    <label for="titulo">
-                        Título de la reseña
-                    </label>
-
-                    <input
-                        type="text"
-                        id="titulo"
-                        name="titulo"
-                        placeholder="Ej: luminoso pero con humedad en invierno"
-                    >
-
-                </div>
-
-                <!-- ESTRELLAS -->
-                <div class="form-group">
-
-                    <label>
-                        Calificación general
-                    </label>
-
-                    <div class="stars" id="stars">
-
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-
-                    </div>
-
-                    <input type="hidden" id="calificacion" value="0">
-
-                </div>
-
-                <!-- IMAGEN -->
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label for="imagen">
-                            Link de imagen
-                        </label>
-
-                        <input
-                            type="url"
-                            id="imagen"
-                            name="imagen"
-                            placeholder="Pegá un link de imagen"
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="imagenArchivo">
-                            Cargar imagen
-                        </label>
-
-                        <input
-                            type="file"
-                            id="imagenArchivo"
-                            name="imagenArchivo"
-                            accept="image/*"
-                        >
-
-                    </div>
-
-                </div>
-
-                <!-- PREVIEW -->
-                <div class="image-preview" id="imagePreview">
-
-                    <img
-                        src=""
-                        alt="Preview"
-                        id="previewImg"
-                    >
-
-                </div>
-
-                <!-- DETALLES -->
-                <div class="form-grid form-grid--four">
-
-                    <div class="form-group">
-
-                        <label for="humedad">
-                            Humedad
-                        </label>
-
-                        <select id="humedad">
-
-                            <option value="">
-                                Seleccionar
-                            </option>
-
-                            <option>Baja</option>
-                            <option>Media</option>
-                            <option>Alta</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="ruido">
-                            Ruido
-                        </label>
-
-                        <select id="ruido">
-
-                            <option value="">
-                                Seleccionar
-                            </option>
-
-                            <option>Bajo</option>
-                            <option>Medio</option>
-                            <option>Alto</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="seguridad">
-                            Seguridad
-                        </label>
-
-                        <select id="seguridad">
-
-                            <option value="">
-                                Seleccionar
-                            </option>
-
-                            <option>Baja</option>
-                            <option>Media</option>
-                            <option>Buena</option>
-                            <option>Muy buena</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="trato">
-                            Trato dueño/inmobiliaria
-                        </label>
-
-                        <select id="trato">
-
-                            <option value="">
-                                Seleccionar
-                            </option>
-
-                            <option>Malo</option>
-                            <option>Regular</option>
-                            <option>Bueno</option>
-                            <option>Muy bueno</option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <!-- TEXTO -->
-                <div class="form-group">
-
-                    <label for="comentario">
-                        Reseña
-                    </label>
-
-                    <textarea
-                        id="comentario"
-                        rows="6"
-                        placeholder="Contá cómo fue vivir ahí: estado del apartamento, gastos comunes, ruido, humedad, trato, zona, etc."
-                    ></textarea>
-
-                </div>
-
-                <!-- BOTON -->
-                <button
-                    type="submit"
-                    class="button button--primary form-submit"
-                >
-                    Publicar reseña
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footer__content">
-
-            <p>
-                © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos.
+            <p class="section-heading__text">
+                Contá cómo fue vivir en el apartamento y ayudá a otros a tomar mejores decisiones.
             </p>
-
-            <div class="footer__links">
-
-                <a href="./buscar.html">
-                    Buscar
-                </a>
-
-                <a href="./resenar.html">
-                    Reseñar
-                </a>
-
-                <a href="./sobre.html">
-                    Sobre el proyecto
-                </a>
-
-            </div>
 
         </div>
 
-    </footer>
+        <!-- FORM -->
 
+        <form class="review-form">
+
+            <!-- BARRIO -->
+
+            <div class="form-group">
+
+                <label for="barrio">
+                    Barrio *
+                </label>
+
+                <select id="barrio" required>
+
+                    <option value="">
+                        Seleccionar barrio
+                    </option>
+
+                    <option>Aguada</option>
+                    <option>Buceo</option>
+                    <option>Carrasco</option>
+                    <option>Centro</option>
+                    <option>Ciudad Vieja</option>
+                    <option>Cordón</option>
+                    <option>Goes</option>
+                    <option>La Blanqueada</option>
+                    <option>Malvín</option>
+                    <option>Maroñas</option>
+                    <option>Nuevo Centro</option>
+                    <option>Palermo</option>
+                    <option>Parque Batlle</option>
+                    <option>Punta Gorda</option>
+                    <option>Tres Cruces</option>
+                    <option>Unión</option>
+
+                </select>
+
+            </div>
+
+            <!-- DIRECCION -->
+
+            <div class="form-group">
+
+                <label for="direccion">
+                    Calle o referencia
+                </label>
+
+                <input
+                    type="text"
+                    id="direccion"
+                    placeholder="Ej: Rivera y Soca"
+                >
+
+            </div>
+
+            <!-- TITULO -->
+
+            <div class="form-group">
+
+                <label for="titulo">
+                    Título *
+                </label>
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Ej: Buen apartamento pero muy húmedo"
+                    required
+                >
+
+            </div>
+
+            <!-- ESTRELLAS -->
+
+            <div class="form-group">
+
+                <label>
+                    Calificación *
+                </label>
+
+                <div class="stars" id="stars">
+
+                    <span class="star" data-value="1">
+                        ★
+                    </span>
+
+                    <span class="star" data-value="2">
+                        ★
+                    </span>
+
+                    <span class="star" data-value="3">
+                        ★
+                    </span>
+
+                    <span class="star" data-value="4">
+                        ★
+                    </span>
+
+                    <span class="star" data-value="5">
+                        ★
+                    </span>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="calificacion"
+                    value="0"
+                >
+
+            </div>
+
+            <!-- HUMEDAD -->
+
+            <div class="form-group">
+
+                <label for="humedad">
+                    Humedad
+                </label>
+
+                <select id="humedad">
+
+                    <option value="">
+                        Seleccionar
+                    </option>
+
+                    <option>
+                        Ninguna
+                    </option>
+
+                    <option>
+                        Poca
+                    </option>
+
+                    <option>
+                        Moderada
+                    </option>
+
+                    <option>
+                        Mucha
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- RUIDO -->
+
+            <div class="form-group">
+
+                <label for="ruido">
+                    Ruido
+                </label>
+
+                <select id="ruido">
+
+                    <option value="">
+                        Seleccionar
+                    </option>
+
+                    <option>
+                        Bajo
+                    </option>
+
+                    <option>
+                        Medio
+                    </option>
+
+                    <option>
+                        Alto
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- SEGURIDAD -->
+
+            <div class="form-group">
+
+                <label for="seguridad">
+                    Seguridad
+                </label>
+
+                <select id="seguridad">
+
+                    <option value="">
+                        Seleccionar
+                    </option>
+
+                    <option>
+                        Buena
+                    </option>
+
+                    <option>
+                        Regular
+                    </option>
+
+                    <option>
+                        Mala
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- TRATO -->
+
+            <div class="form-group">
+
+                <label for="trato">
+                    Trato del dueño/inmobiliaria
+                </label>
+
+                <select id="trato">
+
+                    <option value="">
+                        Seleccionar
+                    </option>
+
+                    <option>
+                        Excelente
+                    </option>
+
+                    <option>
+                        Bueno
+                    </option>
+
+                    <option>
+                        Regular
+                    </option>
+
+                    <option>
+                        Malo
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- LINK IMAGEN -->
+
+            <div class="form-group">
+
+                <label for="imagen">
+                    Link de imagen
+                </label>
+
+                <input
+                    type="text"
+                    id="imagen"
+                    placeholder="https://..."
+                >
+
+            </div>
+
+            <!-- SUBIR IMAGEN -->
+
+            <div class="form-group">
+
+                <label for="imagenArchivo">
+                    O subir imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenArchivo"
+                    accept="image/*"
+                >
+
+            </div>
+
+            <!-- PREVIEW -->
+
+            <div class="image-preview" id="imagePreview">
+
+                <img
+                    src=""
+                    alt="Preview"
+                    id="previewImg"
+                >
+
+            </div>
+
+            <!-- RESEÑA -->
+
+            <div class="form-group">
+
+                <label for="comentario">
+                    Reseña *
+                </label>
+
+                <textarea
+                    id="comentario"
+                    rows="6"
+                    placeholder="Contá tu experiencia..."
+                    required
+                ></textarea>
+
+            </div>
+
+            <!-- BOTON -->
+
+            <button type="submit" class="form-submit">
+                Publicar reseña
+            </button>
+
+        </form>
+
+    </main>
+
+    <!-- MOBILE NAV -->
+
+    <nav class="mobile-bottom-nav">
+
+        <a href="../index.html">
+            <span>🏠</span>
+            Inicio
+        </a>
+
+        <a href="./buscar.html">
+            <span>🔍</span>
+            Buscar
+        </a>
+
+        <a href="./resenar.html" class="active">
+            <span>⭐</span>
+            Reseña
+        </a>
+
+        <a href="./sobre.html">
+            <span>💬</span>
+            Sobre
+        </a>
+
+    </nav>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".star");
+        const ratingInput = document.querySelector("#calificacion");
+
+        stars.forEach(function (star) {
+            star.addEventListener("click", function () {
+                const value = this.getAttribute("data-value");
+
+                ratingInput.value = value;
+
+                stars.forEach(function (item) {
+                    if (Number(item.getAttribute("data-value")) <= Number(value)) {D
+                        item.classList.add("active");
+                    } else {
+                        item.classList.remove("active");
+                    }
+                });
+            });
+        });
+    });
+</script>
     <!-- JS -->
+
     <script type="module" src="../js/main.js"></script>
 
 </body>
