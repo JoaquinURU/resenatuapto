@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Buscar reseñas | ReseñaTuApto</title>
+
+    <link rel="manifest" href="../manifest.json">
+
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ReseñaTuApto">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header class="header">
+
         <nav class="navbar">
-            <a href="../index.html" class="navbar__logo">ReseñaTuApto</a>
+
+            <a href="../index.html" class="navbar__logo">
+                ReseñaTuApto
+            </a>
 
             <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
                 ☰
             </button>
 
             <div class="navbar__content" id="navbarContent">
+
                 <ul class="navbar__menu">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./buscar.html">Buscar</a></li>
@@ -32,14 +51,20 @@
                 <a href="./resenar.html" class="navbar__button">
                     Dejar reseña
                 </a>
+
             </div>
+
         </nav>
+
     </header>
 
+    <!-- MAIN -->
     <main>
+
         <section class="search-page">
 
             <div class="section-heading">
+
                 <span class="section-heading__tag">
                     Buscar reseñas
                 </span>
@@ -51,9 +76,11 @@
                 <p class="section-heading__text">
                     Buscá por barrio, calle o características del apartamento.
                 </p>
+
             </div>
 
             <div class="search-box">
+
                 <input
                     type="text"
                     class="search-box__input"
@@ -63,17 +90,43 @@
                 <button class="search-box__button">
                     Buscar
                 </button>
+
             </div>
 
             <div class="filters">
-                <button class="filter-button active">Todos</button>
-                <button class="filter-button">Aguada</button>
-                <button class="filter-button">Buceo</button>
-                <button class="filter-button">Carrasco</button>
-                <button class="filter-button">Cordón</button>
-                <button class="filter-button">Malvín</button>
-                <button class="filter-button">Palermo</button>
-                <button class="filter-button">Tres Cruces</button>
+
+                <button class="filter-button active">
+                    Todos
+                </button>
+
+                <button class="filter-button">
+                    Aguada
+                </button>
+
+                <button class="filter-button">
+                    Buceo
+                </button>
+
+                <button class="filter-button">
+                    Carrasco
+                </button>
+
+                <button class="filter-button">
+                    Cordón
+                </button>
+
+                <button class="filter-button">
+                    Malvín
+                </button>
+
+                <button class="filter-button">
+                    Palermo
+                </button>
+
+                <button class="filter-button">
+                    Tres Cruces
+                </button>
+
             </div>
 
             <div class="reviews__grid search-results">
@@ -81,23 +134,41 @@
             </div>
 
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div class="footer__content">
+
             <p>
                 © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos.
             </p>
 
             <div class="footer__links">
-                <a href="./buscar.html">Buscar</a>
-                <a href="./resenar.html">Reseñar</a>
-                <a href="./sobre.html">Sobre el proyecto</a>
+
+                <a href="./buscar.html">
+                    Buscar
+                </a>
+
+                <a href="./resenar.html">
+                    Reseñar
+                </a>
+
+                <a href="./sobre.html">
+                    Sobre el proyecto
+                </a>
+
             </div>
+
         </div>
+
     </footer>
 
+    <!-- MOBILE NAV -->
     <nav class="mobile-bottom-nav">
+
         <a href="../index.html">
             <span>🏠</span>
             Inicio
@@ -117,8 +188,10 @@
             <span>💬</span>
             Sobre
         </a>
+
     </nav>
 
     <script type="module" src="../js/main.js"></script>
+
 </body>
 </html>

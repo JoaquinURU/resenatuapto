@@ -8,6 +8,13 @@
 
     <title>Dejar reseña | ReseñaTuApto</title>
 
+    <link rel="manifest" href="../manifest.json">
+
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ReseñaTuApto">
+
     <!-- GOOGLE FONTS -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -425,7 +432,7 @@
 
         <a href="./resenar.html" class="active">
             <span>⭐</span>
-            Reseña
+            Reseñar
         </a>
 
         <a href="./sobre.html">
@@ -434,28 +441,7 @@
         </a>
 
     </nav>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const stars = document.querySelectorAll(".star");
-        const ratingInput = document.querySelector("#calificacion");
 
-        stars.forEach(function (star) {
-            star.addEventListener("click", function () {
-                const value = this.getAttribute("data-value");
-
-                ratingInput.value = value;
-
-                stars.forEach(function (item) {
-                    if (Number(item.getAttribute("data-value")) <= Number(value)) {D
-                        item.classList.add("active");
-                    } else {
-                        item.classList.remove("active");
-                    }
-                });
-            });
-        });
-    });
-</script>
     <!-- JS -->
 
     <script type="module" src="../js/main.js"></script>

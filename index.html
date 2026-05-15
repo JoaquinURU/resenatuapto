@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ReseñaTuApto | Reseñas reales antes de alquilar</title>
+
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ReseñaTuApto">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<nav class="mobile-bottom-nav">
-    <a href="./index.html" class="active">
-        <span>🏠</span>
-        Inicio
-    </a>
 
-    <a href="./pages/buscar.html">
-        <span>🔍</span>
-        Buscar
-    </a>
-
-    <a href="./pages/resenar.html">
-        <span>⭐</span>
-        Reseñar
-    </a>
-
-    <a href="./pages/sobre.html">
-        <span>💬</span>
-        Sobre
-    </a>
-</nav>
 <body>
 
     <!-- HEADER -->
@@ -52,7 +44,7 @@
                 <ul class="navbar__menu">
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./pages/buscar.html">Buscar</a></li>
-                    <li><a href="./pages/resenar.html">Reseña</a></li>
+                    <li><a href="./pages/resenar.html">Reseñar</a></li>
                     <li><a href="./pages/sobre.html">Sobre el proyecto</a></li>
                 </ul>
 
@@ -89,8 +81,8 @@
 
                 <div class="hero__search">
 
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         placeholder="Buscar por barrio, calle o edificio..."
                         class="hero__input"
                     >
@@ -117,8 +109,8 @@
 
             <div class="hero__image">
 
-                <img 
-                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" 
+                <img
+                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80"
                     alt="Apartamento moderno en alquiler"
                 >
 
@@ -266,8 +258,8 @@
 
                 <article class="review-card">
 
-                    <img 
-                        src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" 
+                    <img
+                        src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
                         alt="Apartamento en Buceo"
                         class="review-card__image"
                     >
@@ -313,8 +305,8 @@
 
                 <article class="review-card">
 
-                    <img 
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" 
+                    <img
+                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
                         alt="Apartamento en Cordón"
                         class="review-card__image"
                     >
@@ -360,8 +352,8 @@
 
                 <article class="review-card">
 
-                    <img 
-                        src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" 
+                    <img
+                        src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80"
                         alt="Apartamento en Carrasco"
                         class="review-card__image"
                     >
@@ -432,7 +424,7 @@
 
     </main>
 
-    
+    <!-- FOOTER -->
     <footer class="footer">
 
         <div class="footer__content">
@@ -440,20 +432,53 @@
             <p>
                 © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos a alquilar mejor.
             </p>
+
             <div class="footer__links">
+
                 <a href="./pages/buscar.html">
                     Buscar
                 </a>
-                 <a href="./pages/resenar.html">
-                    Reseña
-                 </a>
+
+                <a href="./pages/resenar.html">
+                    Reseñar
+                </a>
+
                 <a href="./pages/sobre.html">
                     Sobre el proyecto
-                   </a>
-  </div>
-  </div>
-  </footer>
- <script type="module" src="./js/main.js"></script>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- MOBILE NAV -->
+    <nav class="mobile-bottom-nav">
+
+        <a href="./index.html" class="active">
+            <span>🏠</span>
+            Inicio
+        </a>
+
+        <a href="./pages/buscar.html">
+            <span>🔍</span>
+            Buscar
+        </a>
+
+        <a href="./pages/resenar.html">
+            <span>⭐</span>
+            Reseñar
+        </a>
+
+        <a href="./pages/sobre.html">
+            <span>💬</span>
+            Sobre
+        </a>
+
+    </nav>
+
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 </html>

@@ -1,31 +1,23 @@
-const CACHE_NAME = "resenatuapto-v1";
-
-const urlsToCache = [
-    "./",
-    "./index.html",
-    "./pages/buscar.html",
-    "./pages/resenar.html",
-    "./pages/sobre.html",
-    "./assets/css/style.css",
-    "./js/main.js",
-    "./js/firebase-config.js",
-    "./manifest.json"
-];
+const CACHE_NAME = "resenatuapto-v2";
 
 self.addEventListener("install", (event) => {
+    self.skipWaiting();
+});
+
+self.addEventListener("activate", (event) => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(urlsToCache);
-            })
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    return caches.delete(cacheName);
+                })
+            );
+        })
     );
+
+    self.clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
-    event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                return response || fetch(event.request);
-            })
-    );
+    event.respondWith(fetch(event.request));
 });
