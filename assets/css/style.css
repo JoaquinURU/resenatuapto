@@ -1972,3 +1972,14 @@ textarea {
         justify-content: center;
     }
 }
+/* =========================
+   FECHA DE PUBLICACION
+========================= */
+
+.review-card__date {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 700;
+}
