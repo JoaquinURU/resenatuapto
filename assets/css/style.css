@@ -1983,3 +1983,31 @@ textarea {
     font-size: 13px;
     font-weight: 700;
 }
+/* =========================
+   INSTAGRAM FLOAT BUTTON
+========================= */
+
+.instagram-float {
+    position: fixed;
+    right: 20px;
+    bottom: 95px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+}
+
+.instagram-float img {
+    width: 34px;
+    height: 34px;
+}
