@@ -28,23 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const heroInput = document.querySelector(".hero__input");
     const heroButton = document.querySelector(".hero__search-button");
-
     const searchBoxInput = document.querySelector(".search-box__input");
     const searchBoxButton = document.querySelector(".search-box__button");
-
     const neighborhoodCards = document.querySelectorAll(".neighborhood-card");
     const filterButtons = document.querySelectorAll(".filter-button");
-
     const reviewForm = document.querySelector(".review-form");
-
     const stars = document.querySelectorAll(".star");
     const ratingInput = document.querySelector("#calificacion");
-
     const imageUrlInput = document.querySelector("#imagen");
     const imageFileInput = document.querySelector("#imagenArchivo");
     const imagePreview = document.querySelector("#imagePreview");
     const previewImg = document.querySelector("#previewImg");
-
     const searchResultsContainer = document.querySelector(".search-results");
     const homeReviewsContainer = document.querySelector(".reviews__grid");
 
@@ -219,32 +213,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function createReviewCard(review) {
-        const imageUrl =
-            review.imagen ||
-            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80";
+    function createReviewImage(review) {
+        const imageUrl = review.imagen;
 
+        if (imageUrl) {
+            return `
+                <img
+                    src="${imageUrl}"
+                    alt="Apartamento en ${review.barrio || "Montevideo"}"
+                    class="review-card__image"
+                >
+            `;
+        }
+
+        return `
+            <div class="review-card__placeholder">
+                <span class="review-card__placeholder-icon">🏠</span>
+                <span class="review-card__placeholder-title">${review.barrio || "Sin barrio"}</span>
+                <span class="review-card__placeholder-text">Reseña sin imagen</span>
+            </div>
+        `;
+    }
+
+    function createReviewCard(review) {
         const publicationDate = formatDate(review.fecha);
 
         return `
             <article class="review-card review-card--user">
 
-                <img
-                    src="${imageUrl}"
-                    alt="Apartamento en ${review.barrio}"
-                    class="review-card__image"
-                >
+                ${createReviewImage(review)}
 
                 <div class="review-card__content">
 
                     <div class="review-card__top">
 
                         <span class="review-card__neighborhood">
-                            ${review.barrio}
+                            ${review.barrio || "Sin barrio"}
                         </span>
 
                         <span class="review-card__rating">
-                            ⭐ ${review.calificacion}
+                            ⭐ ${review.calificacion || "Sin dato"}
                         </span>
 
                     </div>
@@ -254,11 +262,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     </p>
 
                     <h3 class="review-card__title">
-                        ${review.titulo}
+                        ${review.titulo || "Sin título"}
                     </h3>
 
                     <p class="review-card__text">
-                        ${review.comentario}
+                        ${review.comentario || "Sin comentario"}
                     </p>
 
                     <div class="review-card__details">

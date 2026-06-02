@@ -2011,3 +2011,87 @@ textarea {
     width: 34px;
     height: 34px;
 }
+/* =========================
+   REVIEW PLACEHOLDER IMAGE
+========================= */
+
+.review-card__placeholder {
+    height: 220px;
+    background: linear-gradient(135deg, #fff3e8, #ffe1cc);
+    border-bottom: 1px solid #ffd8c2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    text-align: center;
+    gap: 8px;
+}
+
+.review-card__placeholder-icon {
+    font-size: 42px;
+}
+
+.review-card__placeholder-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff6333;
+}
+
+.review-card__placeholder-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6b7280;
+}
+/* =========================
+   SORT REVIEWS
+========================= */
+
+.sort-controls {
+    max-width: 1180px;
+    margin: 24px auto 28px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.sort-controls label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #4b5563;
+}
+
+.sort-controls select {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    background: #ffffff;
+    color: #1f2937;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(31, 41, 55, 0.08);
+    cursor: pointer;
+}
+
+.empty-reviews-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px;
+    color: #6b7280;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .sort-controls {
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .sort-controls select {
+        width: 100%;
+    }
+}
