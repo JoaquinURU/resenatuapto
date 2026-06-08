@@ -1,103 +1,156 @@
-Buscá este bloque:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar reseñas | ReseñaTuApto</title>
 
-```html
-<div class="filters">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ReseñaTuApto">
 
-    <button class="filter-button active">
-        Todos
-    </button>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <button class="filter-button">
-        Aguada
-    </button>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
 
-    <button class="filter-button">
-        Buceo
-    </button>
+<body>
 
-    <button class="filter-button">
-        Carrasco
-    </button>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="navbar__logo">ReseñaTuApto</a>
 
-    <button class="filter-button">
-        Cordón
-    </button>
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+                ☰
+            </button>
 
-    <button class="filter-button">
-        Malvín
-    </button>
+            <div class="navbar__content" id="navbarContent">
+                <ul class="navbar__menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./buscar.html">Buscar</a></li>
+                    <li><a href="./resenar.html">Reseñar</a></li>
+                    <li><a href="./sobre.html">Sobre el proyecto</a></li>
+                </ul>
 
-    <button class="filter-button">
-        Palermo
-    </button>
+                <a href="./resenar.html" class="navbar__button">
+                    Dejar reseña
+                </a>
+            </div>
+        </nav>
+    </header>
 
-    <button class="filter-button">
-        Tres Cruces
-    </button>
+    <main>
+        <section class="search-page">
 
-</div>
-```
+            <div class="section-heading">
+                <span class="section-heading__tag">Buscar reseñas</span>
 
-Y reemplazalo por:
+                <h1 class="section-heading__title">
+                    Encontrá experiencias reales antes de alquilar
+                </h1>
 
-```html
-<div class="filters">
+                <p class="section-heading__text">
+                    Buscá por barrio, calle o características del apartamento.
+                </p>
+            </div>
 
-    <button class="filter-button active">
-        Todos
-    </button>
+            <div class="search-box">
+                <input
+                    type="text"
+                    class="search-box__input"
+                    placeholder="Ej: Buceo, humedad, Carrasco..."
+                >
 
-    <button class="filter-button">
-        Aguada
-    </button>
+                <button class="search-box__button">
+                    Buscar
+                </button>
+            </div>
 
-    <button class="filter-button">
-        Buceo
-    </button>
+            <div class="filters">
+                <button class="filter-button active">Todos</button>
+                <button class="filter-button">Aguada</button>
+                <button class="filter-button">Buceo</button>
+                <button class="filter-button">Carrasco</button>
+                <button class="filter-button">Cordón</button>
+                <button class="filter-button">Malvín</button>
+                <button class="filter-button">Palermo</button>
+                <button class="filter-button">Tres Cruces</button>
+            </div>
 
-    <button class="filter-button">
-        Carrasco
-    </button>
+            <div class="sort-controls">
+                <label for="sortReviews">
+                    Ordenar reseñas:
+                </label>
 
-    <button class="filter-button">
-        Cordón
-    </button>
+                <select id="sortReviews">
+                    <option value="recent">Más recientes</option>
+                    <option value="best">Mejor valoradas</option>
+                    <option value="worst">Peor valoradas</option>
+                </select>
+            </div>
 
-    <button class="filter-button">
-        Malvín
-    </button>
+            <div class="reviews__grid search-results">
+                <!-- Las reseñas de Firebase se cargan acá con JavaScript -->
+            </div>
 
-    <button class="filter-button">
-        Palermo
-    </button>
+        </section>
+    </main>
 
-    <button class="filter-button">
-        Tres Cruces
-    </button>
+    <footer class="footer">
+        <div class="footer__content">
+            <p>
+                © 2026 ReseñaTuApto. Proyecto creado para ayudar a inquilinos.
+            </p>
 
-</div>
+            <div class="footer__links">
+                <a href="./buscar.html">Buscar</a>
+                <a href="./resenar.html">Reseñar</a>
+                <a href="./sobre.html">Sobre el proyecto</a>
+            </div>
+        </div>
+    </footer>
 
-<div class="sort-controls">
+    <nav class="mobile-bottom-nav">
+        <a href="../index.html">
+            <span>🏠</span>
+            Inicio
+        </a>
 
-    <label for="sortReviews">
-        Ordenar reseñas:
-    </label>
+        <a href="./buscar.html" class="active">
+            <span>🔍</span>
+            Buscar
+        </a>
 
-    <select id="sortReviews">
+        <a href="./resenar.html">
+            <span>⭐</span>
+            Reseñar
+        </a>
 
-        <option value="recent">
-            Más recientes
-        </option>
+        <a href="./sobre.html">
+            <span>💬</span>
+            Sobre
+        </a>
+    </nav>
 
-        <option value="best">
-            Mejor valoradas
-        </option>
+    <script type="module" src="../js/main.js"></script>
 
-        <option value="worst">
-            Peor valoradas
-        </option>
+    <a
+        href="https://www.instagram.com/resenatuapto?igsh=bTZ3amIwZWJ4YTht"
+        class="instagram-float"
+        target="_blank"
+    >
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+        >
+    </a>
 
-    </select>
-
-</div>
-```
+</body>
+</html>
