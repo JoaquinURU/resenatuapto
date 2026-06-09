@@ -3,7 +3,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dejar reseña | ReseñaTuApto</title>
@@ -15,23 +14,19 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="ReseñaTuApto">
 
-    <!-- GOOGLE FONTS -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
 <body>
-
-    <!-- HEADER -->
 
     <header class="header">
 
@@ -41,7 +36,7 @@
                 ReseñaTuApto
             </a>
 
-            <button class="navbar__toggle" id="navbarToggle">
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
                 ☰
             </button>
 
@@ -49,29 +44,10 @@
 
                 <ul class="navbar__menu">
 
-                    <li>
-                        <a href="../index.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./buscar.html">
-                            Buscar
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./resenar.html">
-                            Reseñar
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./sobre.html">
-                            Sobre
-                        </a>
-                    </li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./buscar.html">Buscar</a></li>
+                    <li><a href="./resenar.html">Reseñar</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
 
                 </ul>
 
@@ -84,8 +60,6 @@
         </nav>
 
     </header>
-
-    <!-- MAIN -->
 
     <main class="review-form-page">
 
@@ -105,11 +79,7 @@
 
         </div>
 
-        <!-- FORM -->
-
         <form class="review-form">
-
-            <!-- BARRIO -->
 
             <div class="form-group">
 
@@ -119,10 +89,7 @@
 
                 <select id="barrio" required>
 
-                    <option value="">
-                        Seleccionar barrio
-                    </option>
-
+                    <option value="">Seleccionar barrio</option>
                     <option>Aguada</option>
                     <option>Buceo</option>
                     <option>Carrasco</option>
@@ -144,8 +111,6 @@
 
             </div>
 
-            <!-- DIRECCION -->
-
             <div class="form-group">
 
                 <label for="direccion">
@@ -159,8 +124,6 @@
                 >
 
             </div>
-
-            <!-- TITULO -->
 
             <div class="form-group">
 
@@ -177,8 +140,6 @@
 
             </div>
 
-            <!-- ESTRELLAS -->
-
             <div class="form-group">
 
                 <label>
@@ -187,25 +148,11 @@
 
                 <div class="stars" id="stars">
 
-                    <span class="star" data-value="1">
-                        ★
-                    </span>
-
-                    <span class="star" data-value="2">
-                        ★
-                    </span>
-
-                    <span class="star" data-value="3">
-                        ★
-                    </span>
-
-                    <span class="star" data-value="4">
-                        ★
-                    </span>
-
-                    <span class="star" data-value="5">
-                        ★
-                    </span>
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
 
                 </div>
 
@@ -217,8 +164,6 @@
 
             </div>
 
-            <!-- HUMEDAD -->
-
             <div class="form-group">
 
                 <label for="humedad">
@@ -227,31 +172,15 @@
 
                 <select id="humedad">
 
-                    <option value="">
-                        Seleccionar
-                    </option>
-
-                    <option>
-                        Ninguna
-                    </option>
-
-                    <option>
-                        Poca
-                    </option>
-
-                    <option>
-                        Moderada
-                    </option>
-
-                    <option>
-                        Mucha
-                    </option>
+                    <option value="">Seleccionar</option>
+                    <option>Ninguna</option>
+                    <option>Poca</option>
+                    <option>Moderada</option>
+                    <option>Mucha</option>
 
                 </select>
 
             </div>
-
-            <!-- RUIDO -->
 
             <div class="form-group">
 
@@ -261,27 +190,14 @@
 
                 <select id="ruido">
 
-                    <option value="">
-                        Seleccionar
-                    </option>
-
-                    <option>
-                        Bajo
-                    </option>
-
-                    <option>
-                        Medio
-                    </option>
-
-                    <option>
-                        Alto
-                    </option>
+                    <option value="">Seleccionar</option>
+                    <option>Bajo</option>
+                    <option>Medio</option>
+                    <option>Alto</option>
 
                 </select>
 
             </div>
-
-            <!-- SEGURIDAD -->
 
             <div class="form-group">
 
@@ -291,27 +207,14 @@
 
                 <select id="seguridad">
 
-                    <option value="">
-                        Seleccionar
-                    </option>
-
-                    <option>
-                        Buena
-                    </option>
-
-                    <option>
-                        Regular
-                    </option>
-
-                    <option>
-                        Mala
-                    </option>
+                    <option value="">Seleccionar</option>
+                    <option>Buena</option>
+                    <option>Regular</option>
+                    <option>Mala</option>
 
                 </select>
 
             </div>
-
-            <!-- TRATO -->
 
             <div class="form-group">
 
@@ -321,31 +224,15 @@
 
                 <select id="trato">
 
-                    <option value="">
-                        Seleccionar
-                    </option>
-
-                    <option>
-                        Excelente
-                    </option>
-
-                    <option>
-                        Bueno
-                    </option>
-
-                    <option>
-                        Regular
-                    </option>
-
-                    <option>
-                        Malo
-                    </option>
+                    <option value="">Seleccionar</option>
+                    <option>Excelente</option>
+                    <option>Bueno</option>
+                    <option>Regular</option>
+                    <option>Malo</option>
 
                 </select>
 
             </div>
-
-            <!-- LINK IMAGEN -->
 
             <div class="form-group">
 
@@ -361,8 +248,6 @@
 
             </div>
 
-            <!-- SUBIR IMAGEN -->
-
             <div class="form-group">
 
                 <label for="imagenArchivo">
@@ -377,8 +262,6 @@
 
             </div>
 
-            <!-- PREVIEW -->
-
             <div class="image-preview" id="imagePreview">
 
                 <img
@@ -388,8 +271,6 @@
                 >
 
             </div>
-
-            <!-- RESEÑA -->
 
             <div class="form-group">
 
@@ -406,8 +287,6 @@
 
             </div>
 
-            <!-- BOTON -->
-
             <button type="submit" class="form-submit">
                 Publicar reseña
             </button>
@@ -415,8 +294,6 @@
         </form>
 
     </main>
-
-    <!-- MOBILE NAV -->
 
     <nav class="mobile-bottom-nav">
 
@@ -442,22 +319,18 @@
 
     </nav>
 
-    <!-- JS -->
-
     <script type="module" src="../js/main.js"></script>
 
-<script type="module" src="../js/main.js"></script>
-
-<a
-    href="https://www.instagram.com/resenatuapto?igsh=bTZ3amIwZWJ4YTht"
-    class="instagram-float"
-    target="_blank"
->
-    <img
-        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-        alt="Instagram"
+    <a
+        href="https://www.instagram.com/resenatuapto?igsh=bTZ3amIwZWJ4YTht"
+        class="instagram-float"
+        target="_blank"
     >
-</a>
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+        >
+    </a>
 
-</body>>
+</body>
 </html>
