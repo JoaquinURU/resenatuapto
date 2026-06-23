@@ -51,8 +51,88 @@ document.addEventListener("DOMContentLoaded", () => {
     const tratoInput = document.querySelector("#trato");
     const comentarioInput = document.querySelector("#comentario");
 
+    function hasGSAP() {
+        return typeof window.gsap !== "undefined";
+    }
+
+    function animatePage() {
+        if (!hasGSAP()) return;
+
+        gsap.from(".navbar", {
+            y: -20,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.out"
+        });
+
+        gsap.from(".hero__tag, .hero__title, .hero__text, .hero__search, .hero__actions", {
+            y: 24,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: "power2.out",
+            delay: 0.15
+        });
+
+        gsap.from(".hero__image", {
+            scale: 0.96,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: 0.35
+        });
+
+        gsap.from(".section-heading", {
+            y: 22,
+            opacity: 0,
+            duration: 0.65,
+            stagger: 0.08,
+            ease: "power2.out",
+            delay: 0.15
+        });
+
+        gsap.from(".neighborhood-card", {
+            y: 22,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.04,
+            ease: "power2.out",
+            delay: 0.25
+        });
+
+        gsap.from(".about-card, .mission-item, .form-group, .search-box, .filters, .sort-controls, .cta, .about-cta", {
+            y: 20,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power2.out",
+            delay: 0.2
+        });
+
+        gsap.to(".instagram-float", {
+            scale: 1.07,
+            duration: 1.2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+            delay: 2
+        });
+    }
+
+    function animateReviewCards() {
+        if (!hasGSAP()) return;
+
+        gsap.from(".review-card", {
+            y: 26,
+            opacity: 0,
+            duration: 0.55,
+            stagger: 0.07,
+            ease: "power2.out"
+        });
+    }
+
     function normalizeText(text) {
-        return text
+        return String(text)
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "");
@@ -175,6 +255,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             updateStars(selectedRating);
+
+            if (hasGSAP()) {
+                gsap.fromTo(
+                    star,
+                    { scale: 1 },
+                    {
+                        scale: 1.3,
+                        duration: 0.15,
+                        yoyo: true,
+                        repeat: 1,
+                        ease: "power2.out"
+                    }
+                );
+            }
         });
     });
 
@@ -183,6 +277,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         previewImg.src = imageSrc;
         imagePreview.classList.add("active");
+
+        if (hasGSAP()) {
+            gsap.fromTo(
+                imagePreview,
+                { opacity: 0, scale: 0.96 },
+                { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }
+            );
+        }
     }
 
     if (imageUrlInput) {
@@ -325,6 +427,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 homeReviewsContainer.insertAdjacentHTML("afterbegin", reviewsHTML);
             }
 
+            animateReviewCards();
+
             const savedNeighborhood = localStorage.getItem("selectedNeighborhood");
 
             if (savedNeighborhood && searchBoxInput) {
@@ -416,5 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    console.log("ReseñaTuApto funcionando correctamente.");
+    animatePage();
+
+    console.log("ReseñaTuApto funcionando correctamente con GSAP.");
 });
